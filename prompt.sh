@@ -51,6 +51,7 @@ function build_prompt {
     yellow="\[\033[0;33m\]"
     violet="\[\033[0;35m\]"
     branch_color="\[\033[0;34m\]"
+    pink="\[\033[1;35m\]"
 #    blinking="\[\033[1;5;17m\]"
     reset="\[\033[0m\]"
 
@@ -172,9 +173,9 @@ function build_prompt {
 
 		fi
 
-		PS1="${PS1} (${green}${current_branch}${reset} ${type_of_upstream} ${upstream//\/$current_branch/})"
+		PS1="${PS1} (${pink}${current_branch}${reset} ${type_of_upstream} ${upstream//\/$current_branch/})"
 	    else
-		PS1="${PS1} ${on}(${green}${current_branch}${reset})"
+		PS1="${PS1} ${on}(${pink}${current_branch}${reset})"
 	    fi
 	fi
 
